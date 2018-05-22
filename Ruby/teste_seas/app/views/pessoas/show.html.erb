@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h1>Tabela de pessoas<h1>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th>CNH</th>
+  </tr>
+  <% @pessoas.each do |pessoa| %>
+  <tr>
+    <td><%= pessoa['id'] %></td>
+    <td><%= pessoa['nome'] %></td>
+    <td><%= pessoa['cpf'] %></td>
+    <td><%= pessoa['cnh'] %></td>	
+  </tr>
+  <% end %>
+</table>
+</body>
+</html>
